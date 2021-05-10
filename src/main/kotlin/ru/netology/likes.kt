@@ -1,13 +1,14 @@
 package ru.netology
 
-fun likes(likesVal: Int): String{
-    val likes = likesVal
-    val userVal = if(likesVal.toString().reversed()[0] == '1'){
-        "человеку"
+fun likes(likesCount: Int): String{
+    val userCountEndWithOne = "человеку"
+    val anotherUserCount = "людям"
+    val userCount = if(likesCount%10 == 1){
+        userCountEndWithOne
     }else{
-        "людям"
+        anotherUserCount
     }
-    return "Понравилось $likesVal $userVal"
+    return "Понравилось $likesCount $userCount"
 }
 
 fun main() {
